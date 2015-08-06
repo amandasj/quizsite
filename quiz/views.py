@@ -33,7 +33,7 @@ def quiz(request, slug):
 
 def question(request, slug, number):
 	context = {
-		“question_number”: number,
+		"question_number": number,
 	    	"question": u"Hur många bultar har ölandsbron?",
 		"answer1": u"12",
 	   	"answer2": u"66 400",
