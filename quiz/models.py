@@ -5,8 +5,10 @@ class Quiz(models.Model):
 	name = models.CharField(max_length=100)
 	slug = models.SlugField(max_length=100)
 	description = models.TextField()
+	def __unicode__(self):
+		return self.name
 
-class Qustion(models.Model):
+class Question(models.Model):
 	quiz = models.ForeignKey(Quiz, related_name="questions")
 	question = models.TextField()
 	answer1 = models.CharField(max_length=100)
