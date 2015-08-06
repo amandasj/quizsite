@@ -13,6 +13,10 @@
 	<h1>
 	Quiz 
 	</h1>
+	{% for quiz_slug, quiz in quizzes.items %}
+	<p>{{ quiz.name }}</p>
+	{% endfor %}
+
 	<h2><a href="startup.html">
 	Vad kan du om startups?	
 	</a></h2>
