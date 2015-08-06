@@ -1,0 +1,194 @@
+
+body, html {
+	margin: 0;
+	padding: 0;
+		height: 600px;
+	background: url("photo.jpeg") no-repeat center center fixed;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	width: 100%;
+	margin-bottom: 10px;
+	overflow: hidden;	
+	background-color: #F0F0F0;
+}
+
+h1 {
+	font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	font-size: 40px;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 44px;
+	text-transform: uppercase;	
+	font-weight: 700;
+}
+
+h2 {
+	font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	font-size: 15px;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 34px;
+	text-transform: uppercase;	
+	font-weight: 300;
+}
+
+h3 {
+	font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	font-size: 12px;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 34px;
+	text-transform: uppercase;	
+	font-weight: 300;
+}
+
+a {
+	font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	font-size: 15px;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 34px;
+	text-transform: uppercase;	
+	font-weight: 300;
+	text-decoration: none;
+}
+
+
+
+#intro article, #startup article #fragor article, #resultat article {
+	width: 1000px;	
+	margin: 0px auto;
+}
+
+#intro h1 {
+	text-align: center;
+	margin-top: 200px;
+}
+
+#intro h2 {
+	text-align: center;
+}
+
+#intro a {
+	border: solid #000;
+	border-width: 1px;
+	padding: 10px 20px;
+}
+
+#intro a:hover {
+	background-color: #D6EBFF;
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+
+#startup h1 {
+	text-align: center;
+	margin-top: 200px;
+}
+
+#startup h2 {
+	text-align: center;
+}
+
+#startup h3 {
+	text-align: center;
+}
+
+#startup a {
+	border: solid #000;
+	border-width: 1px;
+	padding: 10px 20px;
+}
+
+#startup a:hover {
+	background-color: #D6EBFF;
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+
+#fragor h1 {
+	text-align: center;
+	margin-top: 200px;
+}
+
+#fragor h2 {
+	text-align: center;
+}
+
+@import "compass/css3";
+
+div {
+  margin:0 0 0.75em 0;
+}
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    color: $DarkBrown;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color: #D6EBFF;
+     border: solid #000;
+	border-width: 1px;
+
+}
+
+input[type="radio"]:checked + label span{
+	background-color: #000000;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+
+
+#fragor a {
+	border: solid #000;
+	border-width: 1px;
+	padding: 10px 20px;
+	margin-top: 30px;
+	display: inline-block;
+}
+
+#fragor a:hover  {
+	background-color: #D6EBFF;
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;	
+}
+
+#resultat h1 {
+	text-align: center;
+	margin-top: 200px;
+}
+
+#resultat h3 {
+	text-align: center;
+	width: 500px;
+	margin-left: 250px;
+}
