@@ -27,7 +27,7 @@ def startpage(request):
 def quiz(request, slug):
 	context = {
 		"quiz": quizzes[slug],
-		“quiz_slug”: slug,
+		"quiz_slug": slug,
 	}
 	return render(request, "quiz/startup.html", context)
 
