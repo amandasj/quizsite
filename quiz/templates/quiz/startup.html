@@ -11,17 +11,7 @@
 	<section id="startup">
 	<article>
 	<h1>{{ quiz.name }}</h1>
-	<p>{{ quiz.description }}</p>
-	<h1>
-	Vad kan du om startups?
-	</h1>
-	<h3>
-	Kan du allt om startups och nya företag?<br>
-	Det här quizet testar dina kunskaper inom startup-världen. 
-	</h3>
-	<h2><a href="fragor.html">
-	Starta quizet
-	</a></h2>
+	<h2>{{ quiz.description }}</h2>
 	<p><a href="{% url "question_page" quiz_slug 1 %}">Starta</a></p>
 	</article>
 	</section>

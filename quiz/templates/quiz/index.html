@@ -14,21 +14,10 @@
 	Quiz 
 	</h1>
 	{% for quiz_slug, quiz in quizzes.items %}
-   	 <p><a href="{% url "quiz_page" quiz_slug %}">
+   	 <h2><a href="{% url "quiz_page" quiz_slug %}">
 		{{ quiz.name }}
-	</a></p>
+	</a></h2>
 	{% endfor %}
-
-
-	<h2><a href="startup.html">
-	Vad kan du om startups?	
-	</a></h2>
-	<h2><a href="startup.html">
-	Vilket företag byggde vilken produkt?
-	</a></h2>
-	<h2><a href="startup.html">
-	Vad kan du om karriär?
-	</a></h2>
 	<article>
 	</section>
 	</body>

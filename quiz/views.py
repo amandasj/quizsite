@@ -6,15 +6,15 @@ from django.shortcuts import render
 
 quizzes = {
 	"klassiker": {
-   		"name": u"Klassiska böcker",
-	   	"description": u"Hur bra kan du dina klassiker?"
+   		"name": u"Vad kan du om startups?",
+	   	"description": u"Har du koll på dina startupkunskaper??"
 	},
 	"fotboll": {
-	   	"name": u"Största fotbollslagen",
-	   	"description": u"Kan du dina lag?"
+	   	"name": u"Vilket företag byggde vilken produkt?",
+	   	"description": u"Kan du para ihop rätt produkt med rätt företag?"
 	},
 	"kanda-hackare": {
-	    	"name": u"Världens mest kända hackare",
+	    	"name": u"Vad kan du om blablabla",
 	    	"description": u"Hackerhistoria är viktigt, kan du den?"	},
 }
 
@@ -34,10 +34,10 @@ def quiz(request, slug):
 def question(request, slug, number):
 	context = {
 		"question_number": number,
-	    	"question": u"Hur många bultar har ölandsbron?",
-		"answer1": u"12",
-	   	"answer2": u"66 400",
-	    	"answer3": u"7 428 954",
+	    	"question": u"Hur många användare har Spotify?",
+		"answer1": u"10 miljoner",
+	   	"answer2": u"40 miljoner",
+	    	"answer3": u"70 miljoner",
 	    	"quiz_slug": slug,
 	}
 	return render(request, "quiz/fragor.html", context)
