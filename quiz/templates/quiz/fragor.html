@@ -10,26 +10,33 @@
 	<body>
 	<section id="fragor">
 	<article>
-	<h1>{{ question_number }}. {{ question }}</h1>
-	<h2>{{ answer1 }}</h2>
-	<h2>{{ answer2 }}</h2>
-	<h2>{{ answer3 }}</h2>
 	<div>
-  <h2><input type="radio" id="radio01" name="radio" />
-  <label for="radio01"><span></span>10 miljoner</label></h2>
-	</div>
-<div>
- <h2><input type="radio" id="radio02" name="radio" />
- <label for="radio02"><span></span>40 miljoner</label></h2>
-</div>
-<div>
- <h2><input type="radio" id="radio03" name="radio" />
- <label for="radio03"><span></span>70 miljoner</label></h2>
-</div>
-	<h2><a href="X">
+	<h1>{{ question_number }}. {{ question }}</h1>
+	<form action="{% url "question_page" quiz.slug question_number %}" method="post">
+	{% csrf_token %}
+	<h2>
+	<label>
+		<input type="radio" name="radio" value="1">
+		{{ answer1 }}
+	</label>
+	</h2>
+	<h2>
+	<label>
+		<input type="radio" name="radio" value="2">
+		{{ answer2 }}
+	</label>
+	</h2>
+	<h2>
+	<label>
+		<input type="radio" name="radio" value="3">
+		{{ answer3 }}
+	</label>
+	</h2>
+	</form>
+	<h2><a href="{% url "question_page" quiz.slug question_number|add:1 %}">
 	Nästa
 	</a></h2>
-<p><a href="{% url "completed_page" quiz_slug %}">Nästa</a></p>
+	<button type="submit">Nästa</button>	
 	</article>
 	</section>
 	</body>

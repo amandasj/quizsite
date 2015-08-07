@@ -5,6 +5,7 @@ from django.shortcuts import render
 # Create your views here.
 
 from quiz.models import Quiz
+from django.shortcuts import redirect
 
 def startpage(request):
 	context = {
@@ -21,14 +22,21 @@ def quiz(request, slug):
 	return render(request, "quiz/startup.html", context)
 
 def question(request, slug, number):
+	number = int(number)
+	quiz = Quiz.objects.get(slug=slug)
+	questions = quiz.questions.all()
+	if number > questions.count():
+		return redirect("completed_page", quiz.slug)
+	question = questions[number - 1]
 	context = {
-		"question_number": number,
-	    	"question": u"Hur många användare har Spotify?",
-		"answer1": u"10 miljoner",
-	   	"answer2": u"40 miljoner",
-	    	"answer3": u"70 miljoner",
-	    	"quiz_slug": slug,
+    		"question_number": number,
+    		"question": question.question,
+	    	"answer1": question.answer1,
+    		"answer2": question.answer2,
+	    	"answer3": question.answer3,
+	    	"quiz": quiz,
 	}
+
 	return render(request, "quiz/fragor.html", context)
 
 
