@@ -15,20 +15,20 @@
 	<form action="{% url "question_page" quiz.slug question_number %}" method="post">
 	{% csrf_token %}
 	<h2>
-		<input type="radio" name="radio" value="1">
+		<input type="radio" name="radio" id="radio01" value="1">
 			<label for="radio01">
 		<span></span>{{ answer1 }}
 	</label>
 	</h2>
 	<h2>
-		<input type="radio" name="radio" value="2">
+		<input type="radio" name="radio" id="radio02" value="2">
 			<label for="radio02">
 		<span></span>{{ answer2 }}
 	</label>
 	</h2>
 	<h2>
 	<label>
-		<input type="radio" name="radio" value="3">
+		<input type="radio" name="radio" id="radio03" value="3">
 			<label for="radio03">
 		<span></span>{{ answer3 }}
 	</label>
