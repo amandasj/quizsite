@@ -13,8 +13,8 @@
 	<h1>
 	Quiz 
 	</h1>
-	{% for quiz_slug, quiz in quizzes.items %}
-   	 <h2><a href="{% url "quiz_page" quiz_slug %}">
+	{% for quiz in quizzes %}
+   	 <h2><a href="{% url "quiz_page" quiz.slug %}">
 		{{ quiz.name }}
 	</a></h2>
 	{% endfor %}
