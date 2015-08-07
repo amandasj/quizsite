@@ -102,6 +102,7 @@ a {
 	border: solid #000;
 	border-width: 1px;
 	padding: 10px 20px;
+	margin-left: 600px;	
 }
 
 #startup a:hover {

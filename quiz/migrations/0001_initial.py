@@ -11,6 +11,17 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
+            name='Question',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('question', models.TextField()),
+                ('answer1', models.CharField(max_length=100)),
+                ('answer2', models.CharField(max_length=100)),
+                ('answer3', models.CharField(max_length=100)),
+                ('correct', models.PositiveIntegerField()),
+            ],
+        ),
+        migrations.CreateModel(
             name='Quiz',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
@@ -19,16 +30,9 @@ class Migration(migrations.Migration):
                 ('description', models.TextField()),
             ],
         ),
-        migrations.CreateModel(
-            name='Qustion',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('question', models.TextField()),
-                ('answer1', models.CharField(max_length=100)),
-                ('answer2', models.CharField(max_length=100)),
-                ('answer3', models.CharField(max_length=100)),
-                ('correct', models.PositiveIntegerField()),
-                ('quiz', models.ForeignKey(related_name='questions', to='quiz.Quiz')),
-            ],
+        migrations.AddField(
+            model_name='question',
+            name='quiz',
+            field=models.ForeignKey(related_name='questions', to='quiz.Quiz'),
         ),
     ]

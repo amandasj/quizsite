@@ -4,19 +4,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-quizzes = {
-	"klassiker": {
-   		"name": u"Vad kan du om startups?",
-	   	"description": u"Har du koll på dina startupkunskaper??"
-	},
-	"fotboll": {
-	   	"name": u"Vilket företag byggde vilken produkt?",
-	   	"description": u"Kan du para ihop rätt produkt med rätt företag?"
-	},
-	"kanda-hackare": {
-	    	"name": u"Vad kan du om blablabla",
-	    	"description": u"Hackerhistoria är viktigt, kan du den?"	},
-}
+from quiz.models import Quiz
 
 def startpage(request):
 	context = {
