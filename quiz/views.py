@@ -26,7 +26,7 @@ def question(request, slug, number):
 	quiz = Quiz.objects.get(slug=slug)
 	questions = quiz.questions.all()
 	if request.POST:
-		answer = int(request.POST["answer"])
+		answer = int(request.POST["radio"])
 
 		saved_answers = {}
 		if quiz.slug in request.session:
@@ -57,15 +57,16 @@ def completed(request, slug):
 	quiz = Quiz.objects.get(slug=slug)
 	questions = quiz.questions.all()
 	saved_answers = request.session[slug]
+	num_correct_answers = 0
+	for counter, question in enumerate(questions):
+		if question.correct == saved_answers[str(counter + 1)]:
+			num_correct_answers += 1
 	context = {
-			"correct": 12,
-			"total": 20,
-		"quiz_slug": slug,
+		"correct": num_correct_answers,
+		"total": questions.count(),
+		"quiz": quiz,
 	}
+
 	return render(request, "quiz/resultat.html", context)
-
-
-
-
 
 

@@ -166,6 +166,25 @@ input[type="radio"]:checked + label span {
   transition:background-color 0.2s linear;
 }
 
+button {
+	margin-left: 600px;
+	background-color: #FFFFFF;
+	border: solid #000;
+	border-width: 1px;
+	padding: 10px 20px;
+	margin-top: 30px;
+	display: inline-block;	
+	text-transform: uppercase;	
+}
+
+button a:hover {
+	background-color: #D6EBFF;
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;		
+}
+
 
 #fragor a {
 	border: solid #000;
